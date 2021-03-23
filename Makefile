@@ -1,10 +1,4 @@
-all: smoke_test smoke_test_1 smoke_test_2 smoke_test_3 smoke_test_4 smoke_test_5
-    ./0
-    ./1
-    ./2
-    ./3
-    ./4
-    ./5 
+all: check
 
 smoke_test: smoke_test.cpp whatever.hpp
     $(CXX) -g -Wall -Wextra -std=c++17 -o 0 smoke_test.cpp
@@ -23,3 +17,11 @@ smoke_test_4: run_array.cpp whatever.hpp
 
 smoke_test_5: run_assign_copy_once.cpp whatever.hpp
 	$(CXX) -g -Wall -Wextra -std=c++17 -o 5 run_assign_copy_once.cpp
+
+check: smoke_test smoke_test_1 smoke_test_2 smoke_test_3 smoke_test_4 smoke_test_5
+   ./0
+   ./1
+   ./2
+   ./3
+   ./4
+   ./5
