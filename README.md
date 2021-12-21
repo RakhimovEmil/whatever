@@ -21,12 +21,12 @@ A a;
 assert(a.x == 0);
 
 whatever w1(a);
-assert(utils::whatever_cast<A>(&w1)->x == 1);
+assert(whatever_cast<A>(&w1)->x == 1);
 
 whatever w2;
 w2 = w1;
-assert(utils::whatever_cast<A>(&w1)->x == 1);
-assert(utils::whatever_cast<A>(&w2)->x == 2);
+assert(whatever_cast<A>(&w1)->x == 1);
+assert(whatever_cast<A>(&w2)->x == 2);
 ```
 
 The value is obtained by analogy with dynamic_cast().
